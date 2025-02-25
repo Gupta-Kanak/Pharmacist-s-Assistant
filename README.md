@@ -58,6 +58,6 @@ $ npm start
 4. Open http://localhost:3000 or http://localhost:3001 in your browser to view the app.
 
 5. The image can be uploaded either from the user's system, drag and drop option. OR
-   There are some sample images available in this repository at [**this location**](./src/Images)
+   There are some sample images available in this repository at [**src folder -> Images**](./src/Images)
 ## 
 
