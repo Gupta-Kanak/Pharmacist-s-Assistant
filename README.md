@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pharmacist's Assistant
 
-## Getting Started
+This project is a module that can be integrated in AI e-commerce website. This module extracts medicine names from the handwritten prescription using OCR and returns the names of medicines.
 
-First, run the development server:
+## Features 🚀
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+<ul>
+<li><b>Handwritten Prescription Recognition :</b>  Uses EasyOCR to extract text from handwritten prescriptions.</li>
+<li><b>Medicine Name Extraction :</b> Mistral AI API processes extracted text to identify medicine names accurately.</li>
+<li><b>User-Friendly Interface :</b> A simple and clean interface for easy image uploading and viewing output.</li>
+</ul>
+
+## Tech Stack
+
+<ul>
+  <li><b>OCR Engine :</b> EasyOCR</li>
+  <li><b>NLP Model :</b> Mistral AI API for medicine name extraction</li>
+  <li><b>Backend :</b> Python (FastAPI)</li>
+  <li><b>Frontend :</b> React.js</li>
+</ul>
+
+## Installation & Setup
+
+Follow these steps to run the project locally:
+1. Clone the Repository
+   
+```
+$ git clone https://github.com/Gupta-Kanak/Pharmacist-s-Assistant.git
+$ cd Pharmacist-s-Assistant
+```
+2. Install Dependencies
+
+```
+$ npm install
+```
+3. Get Mistral AI API key from https://console.mistral.ai/home
+
+4. Store the API key in a .env file as
+
+```
+$ API_KEY = "YOUR-API-KEY"
+```
+place the .env file in the same place as package.json file
+
+5. Run the Application
+   Step - 1
+   Run the backend server
+```
+$ cd Backend
+$ uvicorn main:app --reload
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  Step - 2
+  Run the front-end application in a different terminal.
+```
+$ npm start
+```
+4. Open http://localhost:3000 or http://localhost:3001 in your browser to view the app.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+5. The image can be uploaded either from the user's system, drag and drop option. OR
+   There are some sample images available in this repository at [**this location**](./src/Images)
+## 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
